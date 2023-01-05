@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Üniversite Tercih Portalı</string>
+
+    <string-array name="array">
+        <item>Sayısal</item>
+        <item>Eşit Ağırlık</item>
+        <item>Sözel</item>
+    </string-array>
+</resources>

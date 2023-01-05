@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true"
+    android:focusableInTouchMode="true"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical"
+    app:layout_scrollFlags="scroll"
+    tools:context=".PuanActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/ToolBarStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar_puan"
+        android:background="@color/primaryColor">
+
+        <ImageButton
+            android:id="@+id/geri_puan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryColor"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_36"
+            tools:ignore="VectorDrawableCompat"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="28sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_puan">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/sıra7_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/sıra6_doru"
+                app:layout_constraintTop_toBottomOf="@+id/sıra6_doru" />
+
+            <EditText
+                android:id="@+id/sıra7_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra7_doru"
+                app:layout_constraintStart_toEndOf="@+id/sıra7_doru" />
+
+            <EditText
+                android:id="@+id/sıra7_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra7_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sıra7_yanlıs" />
+
+            <EditText
+                android:id="@+id/sıra6_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/sıra5_doru"
+                app:layout_constraintTop_toBottomOf="@+id/sıra5_doru" />
+
+            <EditText
+                android:id="@+id/sıra6_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra6_doru"
+                app:layout_constraintStart_toEndOf="@+id/sıra6_doru" />
+
+            <EditText
+                android:id="@+id/sıra6_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra6_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sıra6_yanlıs" />
+
+            <EditText
+                android:id="@+id/sıra2_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra2_doru"
+                app:layout_constraintStart_toEndOf="@+id/sıra2_doru" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:text="Yanlış"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+                app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="TYT"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Türkçe"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Matematik"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Sosyal"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Fen"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <EditText
+                android:id="@+id/tr_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/tr_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tr_doru"
+                app:layout_constraintStart_toEndOf="@+id/tr_doru" />
+
+            <EditText
+                android:id="@+id/mat_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/tr_doru" />
+
+            <EditText
+                android:id="@+id/fen_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="@+id/sosyal_doru" />
+
+            <EditText
+                android:id="@+id/sosyal_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sosyal_doru"
+                app:layout_constraintStart_toEndOf="@+id/sosyal_doru" />
+
+            <EditText
+                android:id="@+id/sosyal_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/mat_doru" />
+
+            <EditText
+                android:id="@+id/mat_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/mat_doru"
+                app:layout_constraintStart_toEndOf="@+id/mat_doru" />
+
+            <EditText
+                android:id="@+id/fen_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/fen_doru"
+                app:layout_constraintStart_toEndOf="@+id/fen_doru" />
+
+            <EditText
+                android:id="@+id/fen_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/fen_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/fen_yanlıs" />
+
+            <EditText
+                android:id="@+id/sosyal_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sosyal_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sosyal_yanlıs" />
+
+            <EditText
+                android:id="@+id/mat_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/mat_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/mat_yanlıs" />
+
+            <EditText
+                android:id="@+id/tr_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tr_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/tr_yanlıs" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginLeft="90dp"
+                android:text="Doğru"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+                app:layout_constraintStart_toEndOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:text="Net"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@+id/textView7" />
+
+            <Button
+                android:id="@+id/tyt_hesapla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TYT PUAN HESAPLA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tyt_puan" />
+
+            <TextView
+                android:id="@+id/tyt_puan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="TYT Puan"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Orta Öğretim Başarı Puanı"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <EditText
+                android:id="@+id/obp"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+                app:layout_constraintStart_toEndOf="@+id/textView11" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tyt_hesapla" />
+
+            <TextView
+                android:id="@+id/sıra1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="AYT"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginLeft="110dp"
+                android:text="Doğru"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
+                app:layout_constraintStart_toEndOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:text="Yanlış"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+                app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:text="Net"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+                app:layout_constraintStart_toEndOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/sıra2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/sıra1"
+                app:layout_constraintTop_toBottomOf="@+id/sıra1" />
+
+            <TextView
+                android:id="@+id/sıra3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/sıra2"
+                app:layout_constraintTop_toBottomOf="@+id/sıra2" />
+
+            <TextView
+                android:id="@+id/sıra4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/sıra3"
+                app:layout_constraintTop_toBottomOf="@+id/sıra3" />
+
+            <Button
+                android:id="@+id/btn_ayt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="115dp"
+                android:text="AYT PUAN HESAPLA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sıra4_net" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="AYT Puan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_ayt" />
+
+            <EditText
+                android:id="@+id/sıra1_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginLeft="64dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra1"
+                app:layout_constraintStart_toEndOf="@+id/sıra1" />
+
+            <EditText
+                android:id="@+id/sıra2_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra2_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sıra2_yanlıs" />
+
+            <EditText
+                android:id="@+id/sıra1_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra1_doru"
+                app:layout_constraintStart_toEndOf="@+id/sıra1_doru" />
+
+            <EditText
+                android:id="@+id/sıra1_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra1_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sıra1_yanlıs" />
+
+            <EditText
+                android:id="@+id/sıra2_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra2"
+                app:layout_constraintStart_toStartOf="@+id/sıra1_doru" />
+
+            <EditText
+                android:id="@+id/sıra3_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra3"
+                app:layout_constraintStart_toStartOf="@+id/sıra2_doru" />
+
+            <EditText
+                android:id="@+id/sıra4_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra4"
+                app:layout_constraintStart_toStartOf="@+id/sıra3_doru" />
+
+            <EditText
+                android:id="@+id/sıra4_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra4_doru"
+                app:layout_constraintStart_toEndOf="@+id/sıra4_doru" />
+
+            <EditText
+                android:id="@+id/sıra4_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra4_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sıra4_yanlıs" />
+
+            <EditText
+                android:id="@+id/sıra3_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra3_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sıra3_yanlıs" />
+
+            <EditText
+                android:id="@+id/sıra3_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra3_doru"
+                app:layout_constraintStart_toEndOf="@+id/sıra3_doru" />
+
+            <TextView
+                android:id="@+id/ayt_puan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginLeft="48dp"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
+                app:layout_constraintStart_toEndOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/sıra5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/sıra4"
+                app:layout_constraintTop_toBottomOf="@+id/sıra4" />
+
+            <TextView
+                android:id="@+id/sıra6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/sıra5"
+                app:layout_constraintTop_toBottomOf="@+id/sıra5" />
+
+            <TextView
+                android:id="@+id/sıra7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/sıra6"
+                app:layout_constraintTop_toBottomOf="@+id/sıra6" />
+
+            <EditText
+                android:id="@+id/sıra5_doru"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintStart_toStartOf="@+id/sıra4_doru"
+                app:layout_constraintTop_toBottomOf="@+id/sıra4_doru" />
+
+            <EditText
+                android:id="@+id/sıra5_net"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra5_yanlıs"
+                app:layout_constraintStart_toEndOf="@+id/sıra5_yanlıs" />
+
+            <EditText
+                android:id="@+id/sıra5_yanlıs"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintBaseline_toBaselineOf="@+id/sıra5_doru"
+                app:layout_constraintStart_toEndOf="@+id/sıra5_doru" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
